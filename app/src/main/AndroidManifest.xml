@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="h9player.h9studio.com.h9player">
-
+    package="com.h9studio.h9player">
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -8,6 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
     <activity
         android:name=".player.H9PlayerMainActivity"
         android:theme="@style/PlayerActivityTheme"
@@ -15,8 +16,9 @@
         android:screenOrientation="sensorLandscape"
         >
         <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:mimeType="video/*"/>
         </intent-filter>
     </activity>
     </application>

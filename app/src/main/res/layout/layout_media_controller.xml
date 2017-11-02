@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/controller_background_color">
+    <LinearLayout
+        android:id="@+id/seekbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/seekbar_layout_margin_topbottom"
+        android:layout_marginBottom="@dimen/seekbar_layout_margin_topbottom"
+        >
+        <TextView
+            android:id="@+id/current_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/time_textview_side_margin"
+            android:layout_marginEnd="@dimen/time_textview_side_margin"
+            android:layout_gravity="center_vertical"
+            style="@style/TimeTextStyle"/>
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/total_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/time_textview_side_margin"
+            android:layout_marginEnd="@dimen/time_textview_side_margin"
+            android:layout_gravity="center_vertical"
+            style="@style/TimeTextStyle"/>
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/playpause_btn"
+        android:layout_below="@id/seekbar_layout"
+        android:layout_centerHorizontal="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play_button"
+        android:layout_marginBottom="@dimen/seekbar_layout_margin_topbottom"/>
+
+
+
+</RelativeLayout>
