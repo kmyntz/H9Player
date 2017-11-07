@@ -19,11 +19,11 @@ public class H9Utils {
             remain = inputSecond%hour;
             resultMinute = remain/minute;
             remain = remain%minute;
-            result = String.format("%2d:%2d:%2d", resultHour, resultMinute,remain);
+            result = String.format("%02d:%02d:%02d", resultHour, resultMinute,remain);
         } else {
             resultMinute = inputSecond/minute;
             remain = inputSecond%minute;
-            result = String.format("%2d:%2d", resultMinute,remain);
+            result = String.format("%02d:%02d", resultMinute,remain);
         }
         return result;
 
